@@ -1,0 +1,44 @@
+/* Estilo básico para el contenedor principal */
+.yale-home {
+  display: flex; /* Habilita Flexbox */
+  flex-direction: row; /* Organiza los hijos en fila por defecto */
+  min-height: 100vh; /* Asegura que el contenedor principal ocupe al menos toda la altura de la ventana */
+  position: relative;
+  &__side-nav-container {
+    flex: 0 0 250px; /* Asigna un ancho fijo a la barra lateral y no permite que crezca o se encoja */
+    background-color: var(--primary-500); /* Color de fondo para la barra lateral */
+    min-height: 100vh; /* Asegura que la barra lateral ocupe toda la altura visible */
+    position: relative;
+  }
+  &__side-nav {
+    top: 11em;
+    position: fixed;
+    min-height: 5em;
+  }
+  &__section {
+    line-height: 1.2;
+  }
+}
+
+/* Estilo para el contenedor principal dentro del área de contenido */
+.yale-home__container {
+  flex-grow: 1; /* Permite que este contenedor crezca y ocupe el espacio restante */
+  background-color: var(--primary-500); /* Color de fondo para el área de contenido */
+  padding: 20px; /* Espaciado interno para el contenido */
+  color: #000;
+}
+
+/* Media query para ajustes en dispositivos móviles */
+@media (max-width: 750px) {
+  .yale-home {
+    flex-direction: column; /* Cambia la organización de los hijos a columna */
+    &__side-nav-container {
+      width: 100%; /* La barra lateral ahora ocupa el ancho completo */
+      height: auto; /* Altura automática para ajustarse al contenido */
+      order: -1; /* Asegura que la barra lateral se muestre arriba */
+    }
+    &__container {
+      padding: 10px; /* Reduce el padding en dispositivos móviles */
+    }
+  }
+}

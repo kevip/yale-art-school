@@ -1,0 +1,42 @@
+.yale-layout {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 7.5em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &__container {
+    // padding: 6.2em 11.4em 0 11.4em;
+    min-height: 100vh;
+  }
+  mat-sidenav-content.mat-drawer-content {
+    scroll-behavior: smooth;
+    overflow-y: auto;
+  }
+}
+.app-drawer-container {
+  background: transparent;
+  flex: 1;
+  & mat-sidenav {
+    margin-top: -4px;
+  }
+}
+
+.list-divider {
+  flex-grow: 1;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  .yale-layout {
+    &__container {
+      padding: 2.2em 6.4em 0 2.4em;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.yale-side-menu {
+  // background-color: var(--secondary-500);
+  &__list {
+
+  }
+  &__item {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    &:hover {
+      // color: var(--secondary-500);
+      text-decoration: underline;
+    }
+  }
+}

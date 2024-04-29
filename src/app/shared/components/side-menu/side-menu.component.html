@@ -1,0 +1,9 @@
+<div class="yale-side-menu">
+  <mat-list role="list" class="yale-side-menu__list">
+    @for(item of navItems; track item) {
+    <mat-list-item class="" role="listitem">
+      <a class="yale-side-menu__item" href="#{{item.sectionId}}">{{item.name}}</a>
+    </mat-list-item>
+    }
+  </mat-list>
+</div>
