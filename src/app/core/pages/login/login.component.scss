@@ -1,0 +1,28 @@
+.yale-login {
+  margin-top: 2em;
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 1em;
+  }
+  &__form {
+    max-width: 30em;
+    width: 100%;
+    mat-form-field {
+      width: 100%;
+    }
+  }
+  &__buttons {
+    button {
+      width: 100%;
+    }
+    // display: flex;
+    // justify-content: space-between;
+  }
+}
+@media screen and (max-width: 750px) {
+  .yale-login {
+    &__form {
+      max-width: 100%;
+    }
+  }
+}

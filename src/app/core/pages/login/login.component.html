@@ -1,0 +1,28 @@
+<div class="yale-login">
+  <div class="yale-login__title-container">
+    <h1 class="yale-login__title rj-title">Log in</h1>
+  </div>
+  <form class="yale-login__form" (submit)="submit()" [formGroup]="presenter.form">
+    <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username">
+      @if (presenter.username.invalid) {
+        <mat-error>Username required!</mat-error>
+      }
+    </mat-form-field>
+    </p>
+    <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password">
+      @if (presenter.password.invalid) {
+        <mat-error>Password required!</mat-error>
+      }
+    </mat-form-field>
+    </p>
+    <div class="yale-login__buttons">
+      <button mat-flat-button color="accent" type="submit">Log in</button>
+    </div>
+  </form>
+</div>

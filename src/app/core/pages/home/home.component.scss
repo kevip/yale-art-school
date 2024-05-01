@@ -135,7 +135,6 @@ $header-v-padding: 2em;
       }
       &__side-nav-container {
         width: 100%;
-        // min-height: 20em;
         min-height: 0;
         height: auto;
         order: -1;
@@ -167,7 +166,6 @@ $header-v-padding: 2em;
   .yale-home-body {
     &__exhibition {
       &-cards {
-        // max-width: 100%;
         grid-template-columns: 1fr;
       }
     }
