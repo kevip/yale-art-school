@@ -1,4 +1,4 @@
-# JokesApp
+# School of art redesign
 
 ## Description
 this project implements the redesign of a school of art.
