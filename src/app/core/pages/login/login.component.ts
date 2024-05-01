@@ -34,7 +34,6 @@ export default class LoginComponent {
 
   submit(): void {
     this.presenter.form.markAllAsTouched();
-    console.log('asdas')
     if (this.presenter.form.valid) {
       const request = <ILoginRequest>{
         username: this.presenter.username.value,
