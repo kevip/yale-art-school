@@ -1,0 +1,14 @@
+<mat-card class="yale-card-news">
+  <img class="yale-card-news__image" mat-card-image [src]="data.image" alt="">
+  <mat-card-header class="yale-card-news__header">
+    <mat-card-title class="yale-card-news__title">{{ data.title}}</mat-card-title>
+    <mat-card-subtitle>
+      <div class="yale-card-news__subtitle" [innerHTML]="data.subtitle"></div>
+    </mat-card-subtitle>
+  </mat-card-header>
+  @if(data.content) {
+  <mat-card-content>
+      <div [innerHTML]="data.content"></div>
+    </mat-card-content>
+  }
+</mat-card>

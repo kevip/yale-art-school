@@ -8,8 +8,8 @@
     color: #000;
     text-decoration: none;
     &:hover {
-      // color: var(--secondary-500);
-      text-decoration: underline;
+      border-bottom: .5em solid;
+      color: var(--primary-500);
     }
   }
 }

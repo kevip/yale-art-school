@@ -1,0 +1,9 @@
+<mat-card class="yale-card">
+  <img class="yale-card__image" mat-card-image [src]="data.image" alt="">
+  <mat-card-header class="yale-card__header">
+    <mat-card-title class="yale-card__title">{{ data.title}}</mat-card-title>
+    <mat-card-subtitle>
+      <div class="yale-card__subtitle" [innerHTML]="data.subtitle"></div>
+    </mat-card-subtitle>
+  </mat-card-header>
+</mat-card>

@@ -1,42 +1,89 @@
 <div class="yale-home">
-  <div class="yale-home__side-nav-container">
-    <yale-side-menu class="yale-home__side-nav" [navItems]="navItems()">asdasd</yale-side-menu>
+  <div class="yale-home-header">
+    <div class="yale-home-header__billboard">
+      <div class="yale-home-header__media">
+        <figure class="yale-home-header__figure">
+          <div class="yale-home-header__billboard-logo"></div>
+        </figure>
+      </div>
+      <div class="yale-home-header__info">
+        <div class="yale-home-header__title">
+          <h1>Yale School of Art</h1>
+        </div>
+        <div class="yale-home-header__description">
+          <p>
+            The Yale School of Art is a graduate school that confers MFAs in Graphic Design, Painting/Printmaking, Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students.
+          </p>
+        </div>
+        <!-- <div class="yale-home-header__disclaimer">
+          <button mat-flat-button color="accent">Disclaimer</button>
+        </div> -->
+      </div>
+    </div>
   </div>
-  <div class="yale-home__container">
+  <div class="yale-home-divider"></div>
+  <div class="yale-home-body">
+    <div class="yale-home-body__side-nav-container">
+      <yale-side-menu class="yale-home-body__side-nav" [navItems]="navItems()" />
+    </div>
+    <div class="yale-home-body__container">
+      <section class="yale-home-body__section" id="introduction">
+        <h2>The Yale School of Art</h2>
+        <div class="yale-home-body__section-desc">
+          <p>
+            The Yale School of Art is a graduate school that confers MFAs in Graphic Design, Painting/Printmaking, Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students. Our website exists as an ongoing collaborative experiment in digital publishing and information sharing. It functions as a wiki—all members of the School of Art community have the ability to add new, and edit most existing content.
+          </p>
+        </div>
+      </section>
+      <section class="yale-home-body__section" id="exhibitions">
+        <div class="yale-home-body__section-exhibition">
+          <h2>Exhibitions</h2>
+          <div class="yale-home-body__section-desc">
+          <p>
+            The School of Art galleries in Green Hall provide a year-round forum for the exhibition of work by students, faculty, and special guests in the four graduate departments of the School and the undergraduate program.
+          </p>
+          <p>
+            During exhibitions, Green Hall Gallery at 1156 Chapel Street is typically open to the public but due to COVID-19, it will <strong>remain open only to the Yale community until further notice.</strong>
+          </p>
+          </div>
+        </div>
+        <div class="yale-home-body__exhibition-cards">
+          @for(exhibition of exhibitions(); track exhibition) {
+            <yale-card class="yale-home-body__exhibition-card" [data]="exhibition"/>
+          }
+        </div>
+        <div class="yale-home-body__exhibition-view-more">
+          <button mat-flat-button color="accent">View more</button>
+        </div>
 
-    <section class="yale-home__section" id="introduction">
-      <h2>Introduction</h2>
-      <p>
-        The Yale School of Art is a graduate school that confers MFAs in Graphic Design, Painting/Printmaking, Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students. Our website exists as an ongoing collaborative experiment in digital publishing and information sharing. It functions as a wiki—all members of the School of Art community have the ability to add new, and edit most existing content.
-      </p>
-    </section>
-    <section class="yale-home__section" id="soa">
-      <h2>Happening at SOA</h2>
-      <p>
-        The Yale School of Art is a graduate school that confers MFAs in Graphic Design, Painting/Printmaking, Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students. Our website exists as an ongoing collaborative experiment in digital publishing and information sharing. It functions as a wiki—all members of the School of Art community have the ability to add new, and edit most existing content.
-      </p>
-    </section>
-    <section class="yale-home__section" id="calendar">
-      <h2>Calendar</h2>
-      <p>
-        The Yale School of Art is a graduate school that confers MFAs in Graphic Design, Painting/Printmaking, Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students. Our website exists as an ongoing collaborative experiment in digital publishing and information sharing. It functions as a wiki—all members of the School of Art community have the ability to add new, and edit most existing content.
-      </p>
-    </section>
-    <section class="yale-home__section" id="contact">
-      <h2>Contact</h2>
-      <p>
-        The Yale School of Art is a graduate school that confers MFAs in Graphic Design, Painting/Printmaking, Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students. Our website exists as an ongoing collaborative experiment in digital publishing and information sharing. It functions as a wiki—all members of the School of Art community have the ability to add new, and edit most existing content.
-      </p>
-    </section>
-    <section class="yale-home__section" id="disclaimer">
-      <h2>Disclaimer</h2>
-      <p>
-        This website exists as an ongoing collaborative experiment in digital publishing and information sharing. Because this website functions as a wiki, all members of the School of Art community—graduate students, faculty, staff, and alums—have the ability to add new content and pages, and to edit most of the site’s existing content.
-      </p>
-      <p>
-        Content is the property of its various authors. When you contribute to this site, you agree to abide by Yale University academic and network use policy, and to act as a responsible member of our community.
-      </p>
-    </section>
+      </section>
+      <section class="yale-home-body__section" id="news">
+        <h2>SOA News</h2>
+        <div class="yale-home-body__exhibition-cards">
+          @for(item of news(); track item) {
+            <yale-card-news class="yale-home-body__exhibition-card" [data]="item"/>
+          }
+        </div>
+        <div class="yale-home-body__exhibition-view-more">
+          <button mat-flat-button color="accent">View more</button>
+        </div>
+        <div class="yale-home-body__section-desc"></div>
+      </section>
+      <section class="yale-home-body__section" id="contact">
+        <h2>Contact</h2>
+        <p>
+          The Yale School of Art is a graduate school that confers MFAs in Graphic Design, Painting/Printmaking, Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students. Our website exists as an ongoing collaborative experiment in digital publishing and information sharing. It functions as a wiki—all members of the School of Art community have the ability to add new, and edit most existing content.
+        </p>
+      </section>
+      <section class="yale-home-body__section" id="disclaimer">
+        <h2>Disclaimer</h2>
+        <p>
+          This website exists as an ongoing collaborative experiment in digital publishing and information sharing. Because this website functions as a wiki, all members of the School of Art community—graduate students, faculty, staff, and alums—have the ability to add new content and pages, and to edit most of the site’s existing content.
+        </p>
+        <p>
+          Content is the property of its various authors. When you contribute to this site, you agree to abide by Yale University academic and network use policy, and to act as a responsible member of our community.
+        </p>
+      </section>
+    </div>
   </div>
 </div>
-

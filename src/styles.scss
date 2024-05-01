@@ -6,10 +6,18 @@ body {
   font-family: Roboto,
   "Helvetica Neue", sans-serif;
   background-color: var(--primary-500);
+  background-color: #fff;
 }
 
 :root {
-  --primary-500: #FFDE03;
+  --primary-200: #FFF659;
+  // --primary-500: #FFDE03;
+  --primary-500: #4E34F3;
   --secondary-500: #FFAD35;
   --accent-500: #FF3D00;
+}
+.yale-link {
+  color: var(--primary-500);
+  font-size: 1rem;
+  font-weight: 400;
 }

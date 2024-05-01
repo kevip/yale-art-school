@@ -1,0 +1,38 @@
+.yale-card-news {
+  cursor: pointer;
+  height: 100%;
+  max-height: 25em;
+  position: relative;
+  border: 3px solid;
+  border-color: #000;
+  transition: border .2s;
+  &:hover {
+    border: 3px solid;
+    border-color: var(--primary-500);
+  }
+  &__header {
+    height: 100%;
+  }
+  &__image {
+    object-fit: cover;
+    width: 100%;
+  }
+  &__title {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin-bottom: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__subtitle {
+    font-size: .9rem;
+    // color: #fff;
+    &.subtitle-p {
+
+      margin: 0 !important;
+    }
+  }
+}
