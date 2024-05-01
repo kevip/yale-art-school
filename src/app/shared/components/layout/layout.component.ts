@@ -38,7 +38,6 @@ export class LayoutComponent {
   }
 
   ngOnInit(): void {
-    console.log('ess')
     this.sideNavService.sideNavToggle$.subscribe(() => {
       this.sidenav.toggle();
     });

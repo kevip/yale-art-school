@@ -1,0 +1,49 @@
+.yale-footer {
+  width: 100vw;
+  position: relative;
+  z-index: 90;
+  margin-left: -28px;
+  &__address {
+    padding-right: 10em;
+    p {
+      color: #ccc
+    }
+  }
+  &__tier1,
+  &__tier2 {
+    padding: 1em 2.4em;
+  }
+  &__tier1 {
+    background: #000;
+    display: flex;
+    justify-content: flex-start;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        a {
+          color: #ccc;
+          line-height: 1;
+        }
+      }
+    }
+  }
+  &__tier2 {
+    background: var(--text);
+    p {
+      color: #ccc;
+      margin: 0;
+    }
+  }
+}
+@media screen and (max-width: 1050px) {
+  .yale-footer {
+    margin-left: -34px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .yale-footer {
+    margin-left: -56px;
+  }
+}

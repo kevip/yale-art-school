@@ -1,9 +1,18 @@
 <div class="yale-side-menu">
-  <mat-list role="list" class="yale-side-menu__list">
-    @for(item of navItems; track item) {
-    <mat-list-item class="" role="listitem">
-      <a class="yale-side-menu__item" href="#{{item.sectionId}}">{{item.name}}</a>
-    </mat-list-item>
-    }
-  </mat-list>
+  <div class="yale-side-menu__mobile">
+    <div class="yale-side-menu__view-more">
+      <p (click)="toggleMenu()">
+        Sections&nbsp;<mat-icon>expand_more</mat-icon>
+      </p>
+    </div>
+  </div>
+  <div class="yale-side-menu__desktop{{opened ? '--opened' : ''}}">
+    <mat-list role="list" class="yale-side-menu__list">
+      @for(item of navItems; track item) {
+        <mat-list-item class="" role="listitem">
+          <a class="yale-side-menu__item" href="#{{item.sectionId}}">{{item.name}}</a>
+        </mat-list-item>
+      }
+    </mat-list>
+  </div>
 </div>

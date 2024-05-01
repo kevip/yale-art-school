@@ -76,6 +76,9 @@ $header-v-padding: 2em;
         justify-content: end;
       }
     }
+    &__side-nav-wrapper {
+      position: relative;
+    }
     &__side-nav-container {
       flex: 0 0 210px;
       background-color: #fff;
@@ -123,17 +126,26 @@ $header-v-padding: 2em;
       &__section-desc {
         padding: 0;
       }
+      &__side-nav {
+        position: fixed;
+        top: 7.5em;
+        left: 0;
+        width: 100vw;
+        z-index: 9;
+      }
       &__side-nav-container {
         width: 100%;
+        // min-height: 20em;
+        min-height: 0;
         height: auto;
         order: -1;
       }
       &__container {
-        padding: 10px;
+        padding: 2em;
       }
     }
     &-header {
-      &__figure {
+      &__media {
         display: none;
       }
     }

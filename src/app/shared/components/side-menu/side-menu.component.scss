@@ -1,15 +1,49 @@
 .yale-side-menu {
-  // background-color: var(--secondary-500);
-  &__list {
-
+  background-color: #fff;
+  &__mobile {
+    display: none;
+  }
+  &__view-more {
+    background-color: var(--primary-500);
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    p {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin: 0;
+    }
   }
   &__item {
     font-weight: bold;
     color: #000;
     text-decoration: none;
     &:hover {
-      border-bottom: .5em solid;
+      border-bottom: 0.5em solid;
       color: var(--primary-500);
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .yale-side-menu {
+    &__desktop {
+      display: none;
+      background-color: #fff;
+      &--opened {
+        text-align: center;
+        display: block;
+      }
+    }
+    &__list {
+      text-align: center;
+    }
+    &__mobile {
+      display: block;
     }
   }
 }

@@ -26,7 +26,7 @@ mat-toolbar {
       // color: #fff;
       font-size: 1.1rem;
       position: relative;
-      &:hover::after {
+      &:hover:not(.burger)::after {
         // background: rgb(23, 204, 189);
         background: var(--primary-500);
         bottom: 0px;

@@ -1,18 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
 import { TSideMenuItem } from '../../../core/types/side-menu-item.type';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'yale-side-menu',
   standalone: true,
-  imports: [MatListModule],
+  imports: [MatListModule, MatIconModule],
   templateUrl: './side-menu.component.html',
   styleUrl: './side-menu.component.scss'
 })
-export class SideMenuComponent implements OnInit {
+export class SideMenuComponent {
   @Input() navItems: TSideMenuItem[] = [];
 
-  ngOnInit(): void {
+  opened = false;
 
+  toggleMenu(): void {
+    this.opened = !this.opened;
   }
+
 }
