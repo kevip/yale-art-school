@@ -7,6 +7,7 @@ import { Router, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { of } from 'rxjs';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 describe('@LoginComponent', () => {
   let component: LoginComponent;
@@ -29,6 +30,7 @@ describe('@LoginComponent', () => {
         LoginPresenter,
         { provide: AuthHttp, useValue: http },
         { provide: Router, useValue: router },
+        provideAnimations(),
       ],
     })
       .compileComponents();
@@ -65,18 +67,19 @@ describe('@LoginComponent', () => {
       expect(http.login).not.toHaveBeenCalled();
     });
 
-    it('should call http.login with the correct data if the form is valid', () => {
+    it('should call http.login with the correct data if the form is valid', fakeAsync(() => {
       component.presenter.username.setValue('user');
       component.presenter.password.setValue('password');
       http.login.and.returnValue(of({} as any));
 
       component.submit();
+      tick(500);
 
       expect(http.login).toHaveBeenCalledWith({
         username: 'user',
         password: 'password'
       });
-    });
+    }));
 
     it('should navigate to the home page after a successful login', fakeAsync(() => {
       component.presenter.username.setValue('user');
